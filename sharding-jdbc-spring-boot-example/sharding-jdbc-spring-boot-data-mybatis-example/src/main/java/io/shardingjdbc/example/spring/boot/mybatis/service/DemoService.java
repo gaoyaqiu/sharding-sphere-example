@@ -43,7 +43,7 @@ public class DemoService {
         orderItemRepository.truncateTable();
         List<Long> orderIds = new ArrayList<>(10);
         System.out.println("1.Insert--------------");
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             Order order = new Order();
             order.setUserId(51);
             order.setStatus("INSERT_TEST");
@@ -57,14 +57,18 @@ public class DemoService {
             item.setStatus("INSERT_TEST");
             orderItemRepository.insert(item);
         }
-        System.out.println(orderItemRepository.selectAll());
-        System.out.println("2.Delete--------------");
-        for (Long each : orderIds) {
+
+        System.out.println(orderItemRepository.selectAll().size() + " ----- ");
+        orderItemRepository.selectAll().stream().forEach(System.out::println);
+
+       System.out.println("2.Delete--------------");
+  /*      for (Long each : orderIds) {
             orderRepository.delete(each);
             orderItemRepository.delete(each);
         }
-        System.out.println(orderItemRepository.selectAll());
+        orderItemRepository.selectAll().stream().forEach(System.out::println);
+
         orderItemRepository.dropTable();
-        orderRepository.dropTable();
+        orderRepository.dropTable();*/
     }
 }
