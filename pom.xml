@@ -1,17 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>io.shardingjdbc</groupId>
-    <artifactId>sharding-jdbc-example</artifactId>
-    <version>2.0.3</version>
+    <groupId>io.shardingsphere</groupId>
+    <artifactId>sharding-sphere-example</artifactId>
+    <version>3.0.0.M1</version>
     <packaging>pom</packaging>
     
     <modules>
-        <module>sharding-jdbc-raw-jdbc-example</module>
-        <module>sharding-jdbc-spring-namespace-example</module>
-        <module>sharding-jdbc-spring-boot-example</module>
-        <module>sharding-jdbc-orchestration-example</module>
-        <module>sharding-jdbc-orchestration-spring-example</module>
+        <module>sharding-jdbc-example</module>
         <module>sharding-jdbc-transaction-example</module>
+        <module>sharding-proxy-example</module>
     </modules>
     
     <properties>
@@ -20,7 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.locale>zh_CN</project.build.locale>
         
-        <sharding-jdbc.version>2.0.3</sharding-jdbc.version>
+        <sharding-sphere.version>3.0.0.M1</sharding-sphere.version>
         
         <spring-framework.version>4.3.6.RELEASE</spring-framework.version>
         <spring-boot.version>1.5.0.RELEASE</spring-boot.version>
